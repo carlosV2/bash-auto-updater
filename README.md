@@ -19,7 +19,7 @@ of your project when the auto update needs to happen:
 ```bash
 #UPDATE_DELAY=86400
 UPDATE_PATH=`dirname ${BASH_SOURCE}`
-$(cd ${UPDATE_PATH}; git submodule update --init)
+$(cd ${UPDATE_PATH}; git submodule update --init -q) > /dev/null
 source "${UPDATE_PATH}/lib/update/update.sh"
 ```
 
